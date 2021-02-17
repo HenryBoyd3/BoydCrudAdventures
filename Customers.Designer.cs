@@ -84,7 +84,6 @@ namespace BoydCrudAdventures
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1846, 799);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // UpdateSQL
             // 
@@ -140,7 +139,6 @@ namespace BoydCrudAdventures
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Customers";
             this.Text = "Customers";
-            this.Load += new System.EventHandler(this.Customers_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
