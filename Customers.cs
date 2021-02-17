@@ -76,33 +76,33 @@ namespace BoydCrudAdventures
             
                 string a = string.Empty;
                 var custID = dataGridView1.SelectedRows[0].Cells[0].Value;
-                var addID = dataGridView1.SelectedRows[0].Cells[13].Value;
+                var addID = dataGridView1.SelectedRows[0].Cells[12].Value;
                 string title = a, firstName = a, middleName = a, lastName = a, suffex = a, companyName = a, salesPerson = a, email = a, phone = a, passhash = a;
                 string passSalt = a, addId = a, addType = a, addLine1 = a, addLine2 = a, city = a, stateProv = a, country = a, postalc = a, rowguid = a, modDate = a;
                 var currect = dataGridView1.SelectedRows;
                 foreach (DataGridViewRow cell in currect)
                 {
-                    title = cell.Cells[2].Value.ToString();
-                    firstName = cell.Cells[3].Value.ToString();
-                    middleName = cell.Cells[4].Value.ToString();
-                    lastName = cell.Cells[5].Value.ToString();
-                    suffex = cell.Cells[6].Value.ToString();
-                    companyName = cell.Cells[7].Value.ToString();
-                    salesPerson = cell.Cells[8].Value.ToString();
-                    email = cell.Cells[9].Value.ToString();
-                    phone = cell.Cells[10].Value.ToString();
-                    passhash = cell.Cells[11].Value.ToString();
-                    passSalt = cell.Cells[12].Value.ToString();
-                    addType = cell.Cells[14].Value.ToString();
-                    addLine1 = cell.Cells[15].Value.ToString();
-                    addLine2 = cell.Cells[16].Value.ToString();
-                    city = cell.Cells[17].Value.ToString();
-                    stateProv = cell.Cells[18].Value.ToString();
-                    country = cell.Cells[19].Value.ToString();
-                    postalc = cell.Cells[20].Value.ToString();
-                    rowguid = cell.Cells[21].Value.ToString();
-                    modDate = cell.Cells[22].Value.ToString();
-                }
+
+                title = cell.Cells[1].Value.ToString();
+                firstName = cell.Cells[2].Value.ToString();
+                middleName = cell.Cells[3].Value.ToString();
+                lastName = cell.Cells[4].Value.ToString();
+                suffex = cell.Cells[5].Value.ToString();
+                companyName = cell.Cells[6].Value.ToString();
+                salesPerson = cell.Cells[7].Value.ToString();
+                email = cell.Cells[8].Value.ToString();
+                phone = cell.Cells[9].Value.ToString();
+                passhash = cell.Cells[10].Value.ToString();
+                passSalt = cell.Cells[11].Value.ToString();
+                addType = cell.Cells[13].Value.ToString();
+                addLine1 = cell.Cells[14].Value.ToString();
+                addLine2 = cell.Cells[15].Value.ToString();
+                city = cell.Cells[16].Value.ToString();
+                stateProv = cell.Cells[17].Value.ToString();
+                country = cell.Cells[18].Value.ToString();
+                postalc = cell.Cells[19].Value.ToString();
+                modDate = cell.Cells[21].Value.ToString();
+            }
 
                 using (SqlConnection conn = new SqlConnection(DB.getConnection()))
                 {
@@ -120,7 +120,6 @@ namespace BoydCrudAdventures
                     cmd.Parameters.AddWithValue("@phone", phone);
                     cmd.Parameters.AddWithValue("@PasswordHash", passhash);
                     cmd.Parameters.AddWithValue("@PasswordSalt", passSalt);
-                    cmd.Parameters.AddWithValue("@rowguid", rowguid);
                     cmd.Parameters.AddWithValue("@modifydate", modDate);
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -133,7 +132,6 @@ namespace BoydCrudAdventures
                     cmd.Parameters.AddWithValue("@customerID", custID);
                     cmd.Parameters.AddWithValue("@addressID", addId);
                     cmd.Parameters.AddWithValue("@addressType", addType);
-                    cmd.Parameters.AddWithValue("@rowguid", rowguid);
                     cmd.Parameters.AddWithValue("@modifiedDate", modDate);
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -149,7 +147,6 @@ namespace BoydCrudAdventures
                     cmd.Parameters.AddWithValue("@stateProvince", stateProv);
                     cmd.Parameters.AddWithValue("@countryRegion", country);
                     cmd.Parameters.AddWithValue("@postalCode", postalc);
-                    cmd.Parameters.AddWithValue("@rowguid", rowguid);
                     cmd.Parameters.AddWithValue("@modifiedDate", modDate);
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -165,32 +162,32 @@ namespace BoydCrudAdventures
           var bob =  dataGridView1.Rows;
             string a = string.Empty;
                 var custID = dataGridView1.SelectedRows[0].Cells[0].Value;
-                var addID = dataGridView1.SelectedRows[0].Cells[13].Value;
+                var addID = dataGridView1.SelectedRows[0].Cells[12].Value;
                 string title = a, firstName = a, middleName = a, lastName = a, suffex = a, companyName = a, salesPerson = a, email = a, phone = a, passhash = a;
                 string passSalt = a, addId = a, addType = a, addLine1 = a, addLine2 = a, city = a, stateProv = a, country = a, postalc = a, rowguid = a, modDate = a;
                 var currect = dataGridView1.SelectedRows;
                 foreach (DataGridViewRow cell in currect)
                 {
 
-                    title = cell.Cells[2].Value.ToString();
-                    firstName = cell.Cells[3].Value.ToString();
-                    middleName = cell.Cells[4].Value.ToString();
-                    lastName = cell.Cells[5].Value.ToString();
-                    suffex = cell.Cells[6].Value.ToString();
-                    companyName = cell.Cells[7].Value.ToString();
-                    salesPerson = cell.Cells[8].Value.ToString();
-                    email = cell.Cells[9].Value.ToString();
-                    phone = cell.Cells[10].Value.ToString();
-                    passhash = cell.Cells[11].Value.ToString();
-                    passSalt = cell.Cells[12].Value.ToString();
-                    addType = cell.Cells[14].Value.ToString();
-                    addLine1 = cell.Cells[15].Value.ToString();
-                    addLine2 = cell.Cells[16].Value.ToString();
-                    city = cell.Cells[17].Value.ToString();
-                    stateProv = cell.Cells[18].Value.ToString();
-                    country = cell.Cells[19].Value.ToString();
-                    postalc = cell.Cells[20].Value.ToString();
-                    modDate = cell.Cells[22].Value.ToString();
+                    title = cell.Cells[1].Value.ToString();
+                    firstName = cell.Cells[2].Value.ToString();
+                    middleName = cell.Cells[3].Value.ToString();
+                    lastName = cell.Cells[4].Value.ToString();
+                    suffex = cell.Cells[5].Value.ToString();
+                    companyName = cell.Cells[6].Value.ToString();
+                    salesPerson = cell.Cells[7].Value.ToString();
+                    email = cell.Cells[8].Value.ToString();
+                    phone = cell.Cells[9].Value.ToString();
+                    passhash = cell.Cells[10].Value.ToString();
+                    passSalt = cell.Cells[11].Value.ToString();
+                    addType = cell.Cells[13].Value.ToString();
+                    addLine1 = cell.Cells[14].Value.ToString();
+                    addLine2 = cell.Cells[15].Value.ToString();
+                    city = cell.Cells[16].Value.ToString();
+                    stateProv = cell.Cells[17].Value.ToString();
+                    country = cell.Cells[18].Value.ToString();
+                    postalc = cell.Cells[19].Value.ToString();
+                    modDate = cell.Cells[21].Value.ToString();
                 }
                 using (SqlConnection conn = new SqlConnection(DB.getConnection()))
                 {
