@@ -99,10 +99,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="createDropProc\create procssql.sql" />
-    <Content Include="createDropProc\dropprocedures.sql" />
+    <Content Include="PROCS\CREATE_procsandviews.sql" />
+    <Content Include="PROCS\DROP_procsandviews.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
