@@ -63,5 +63,17 @@ namespace BoydCrudAdventures
             DeleteProcs.deleteRow(dataGridView1);
             GetDatabasedata.getCustomers(dataGridView1);
         }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("to update a row find the cell you wish to edit double click that cell then enter the data you wish to update once you finish what you want to change click the update button." +
+                "\n\nto add a row, go to the end of the list and select the row under the last filled row, enter all the data you need then click the insert button." +
+                "\n\nunable to edit the address data before customerID 1000 due to old values not having correct data for addresses.");
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

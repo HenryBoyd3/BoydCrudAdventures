@@ -11,7 +11,7 @@ namespace BoydCrudAdventures
 {
     class GetDatabasedata
     {
-        public static DataGridView getProducts(DataGridView thisData)
+        public static DataGridView getProducts(DataGridView prodData)
         {
             using (SqlConnection conn = new SqlConnection(DB.getConnection()))
             {
@@ -22,11 +22,11 @@ namespace BoydCrudAdventures
                 da.Fill(tabel);
                 BindingSource binding = new BindingSource();
                 binding.DataSource = tabel;
-                thisData.DataSource = tabel;
-                thisData.AutoGenerateColumns = true;
+                prodData.DataSource = tabel;
+                prodData.AutoGenerateColumns = true;
 
             }
-            return thisData;
+            return prodData;
         }
         public static DataGridView getCustomers(DataGridView custdata)
         {

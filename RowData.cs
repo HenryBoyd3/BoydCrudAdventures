@@ -41,12 +41,10 @@ namespace BoydCrudAdventures
             { 
                 addID = (Int32)selectedData.SelectedRows[0].Cells[12].Value; 
             }
-
             
             var currect = selectedData.SelectedRows;
             foreach (DataGridViewRow cell in currect)
             {
-
                 title = cell.Cells[1].Value.ToString();
                 firstName = cell.Cells[2].Value.ToString();
                 middleName = cell.Cells[3].Value.ToString();

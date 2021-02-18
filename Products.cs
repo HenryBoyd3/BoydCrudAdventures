@@ -33,9 +33,15 @@ namespace BoydCrudAdventures
             home.Show();
         }
 
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is a view of all data to change pages select the page you want to go to.");
+        }
 
-
-
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
